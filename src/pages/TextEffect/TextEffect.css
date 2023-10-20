@@ -1,0 +1,44 @@
+.textEffect-container {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #030518;
+  width: 60vh;
+  height: 60vh;
+  overflow: hidden;
+  border-radius: 20px;
+}
+.textEffect-textbox {
+line-height: 0.5;
+  width: 60vh;
+  height: 60vh;
+  color: rgb(206, 206, 206);
+  word-wrap: break-word;
+  background: url("https://mir-s3-cdn-cf.behance.net/projects/404/d75cb597825683.5ece5294e5c5a.png") 0 0 / cover no-repeat;
+  background-clip: text;
+  -webkit-text-fill-color: rgba(0, 0, 0, 0.452);
+    -webkit-background-clip:text;
+
+  -webkit-mask-image: radial-gradient(
+    circle,
+    black 50%,
+    rgba(0, 0, 0, 0.2) 100%
+  );
+  mask-image: radial-gradient(circle, black 50%, rgba(0, 0, 0, 0.5) 50%);
+}
+.overlay {
+  top: 50%;
+  left: 50%;
+  transform: translate(0%, -100%);
+  width: 60vh;
+}
+.overlay > img {
+  height: 60vh;
+  width: 60vh;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  /* mix-blend-mode:screen; */
+  opacity: 0;
+}
