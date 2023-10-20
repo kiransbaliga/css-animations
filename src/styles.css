@@ -1,0 +1,187 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap");
+* {
+  transition: all 0.5s ease-in-out;
+}
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  background-color: #ebf0f5;
+  margin: 0;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+.Container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background-color: #ebf0f5;
+}
+
+.Img {
+  position: relative;
+  height: 250px;
+  width: 30px;
+  box-shadow: 5px 5px rgb(17, 16, 16);
+  overflow: hidden;
+  border: 1px solid #211815;
+  border-radius: 15px;
+  transition: all 1s ease-in-out;
+}
+
+.active {
+  border: 1px solid #211815;
+  border-radius: 15px;
+  overflow: hidden;
+  height: 250px;
+  width: 350px;
+  box-shadow: 5px 10px rgba(0, 0, 0, 0.616);
+}
+
+img {
+  height: 250px;
+  width: 350px;
+}
+
+canvas {
+  height: 100vh;
+  background-color: #191b1b;
+}
+
+.SlotScreen {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: calc(65vw + 40px);
+  height: calc(60vh + 40px);
+  background-color: #162014;
+  border: 20px solid #112e1d;
+}
+.Gradient {
+  z-index: 5;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: calc(65vw + 40px);
+  height: calc(60vh + 40px);
+  background: rgb(38, 143, 26);
+  background: radial-gradient(
+    circle,
+    rgba(32, 133, 21, 0) 0%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  opacity: 0.9;
+}
+.headings {
+  position: relative;
+  top: 25px;
+}
+.headings > h1 {
+  font-family: "Orbitron", sans-serif;
+  font-size: 35px;
+  color: #18db18;
+  text-shadow: 5px 5px 10px black;
+  margin: 0;
+  padding: 0;
+}
+
+.num {
+  position: relative;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  white-space: nowrap;
+  font-size: 140px;
+  translate: 0rem 75px;
+}
+.animate {
+  position: relative;
+  top: 35px;
+  width: 120px;
+  height: 130px;
+  border-bottom: 5px solid #18db18;
+  overflow: hidden;
+}
+
+.decor {
+  width: 30px;
+}
+span {
+  font-family: "Orbitron", sans-serif;
+  font-size: 130px;
+  letter-spacing: 0.00000000001em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #18db18;
+}
+.money {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 7px;
+}
+.contents {
+  position: relative;
+  top: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.strokes {
+  z-index: 4;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: calc(55vw);
+  height: calc(20vh);
+  background: linear-gradient(0deg, #162014, rgba(0, 0, 0, 0));
+  background-size: 100% 7px;
+  opacity: 0.5;
+}
+.num {
+  position: absolute;
+  transform: translateY(-50%);
+}
+.please {
+  position: absolute;
+  animation: animation 3s ease-in-out;
+}
+
+.redo {
+  color: #fff;
+  margin: 40px auto;
+  background-color: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  width: 100%;
+  border-radius: 15px;
+  padding: 32px;
+  backdrop-filter: blur(10px);
+  position: absolute;
+  bottom: 1%;
+  z-index: 8;
+  left: 50%;
+  translate: translateX(-50%);
+  width: 125px;
+  height: 50px;
+}
+
+@keyframes animation {
+  0% {
+    transform: translateY(50%);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
