@@ -1,6 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap");
-* {
-  transition: all 0.5s ease-in-out;
+/* define variable colors-primary */
+.greentheme {
+  --color-primary: #18db18;
+  --color-shadow: #112e1d;
+}
+.pinktheme {
+  --color-primary: #d24bdf;
+  --color-shadow: #29112e;
+}
+.bluetheme {
+  --color-primary: #4b61df;
+  --color-shadow: #13112e;
 }
 .App {
   font-family: sans-serif;
@@ -64,7 +74,8 @@ canvas {
   width: calc(65vw + 40px);
   height: calc(60vh + 40px);
   background-color: #162014;
-  border: 20px solid #112e1d;
+  border: 20px solid var(--color-shadow);
+  color: var(--color-primary);
 }
 .Gradient {
   z-index: 5;
@@ -74,7 +85,7 @@ canvas {
   transform: translate(-50%, -50%);
   width: calc(65vw + 40px);
   height: calc(60vh + 40px);
-  background: rgb(38, 143, 26);
+  /* background: rgb(38, 143, 26); */
   background: radial-gradient(
     circle,
     rgba(32, 133, 21, 0) 0%,
@@ -89,7 +100,7 @@ canvas {
 .headings > h1 {
   font-family: "Orbitron", sans-serif;
   font-size: 35px;
-  color: #18db18;
+  /* color: #18db18; */
   text-shadow: 5px 5px 10px black;
   margin: 0;
   padding: 0;
@@ -108,7 +119,7 @@ canvas {
   top: 35px;
   width: 120px;
   height: 130px;
-  border-bottom: 5px solid #18db18;
+  border-bottom: 5px solid var(--color-primary);
   overflow: hidden;
 }
 
@@ -122,7 +133,7 @@ span {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #18db18;
+  /* color: #18db18; */
 }
 .money {
   display: flex;
@@ -144,7 +155,7 @@ span {
   top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: calc(55vw);
+  width: calc(60vw);
   height: calc(20vh);
   background: linear-gradient(0deg, #162014, rgba(0, 0, 0, 0));
   background-size: 100% 7px;
@@ -156,27 +167,52 @@ span {
 }
 .please {
   position: absolute;
-  animation: animation 3s ease-in-out;
+  animation: animation 3s cubic-bezier(0.1, 0.25, 0.01, 1);
 }
 
-.redo {
+.glass {
   color: #fff;
-  margin: 40px auto;
+ 
   background-color: rgba(255, 255, 255, 0.06);
   border: 1px solid rgba(255, 255, 255, 0.1);
   width: 100%;
-  border-radius: 15px;
-  padding: 32px;
+  border-radius: 10px;
   backdrop-filter: blur(10px);
-  position: absolute;
-  bottom: 1%;
-  z-index: 8;
-  left: 50%;
-  translate: translateX(-50%);
-  width: 125px;
-  height: 50px;
 }
 
+.buttongroup {
+  position: absolute;
+  bottom: 2%;
+  z-index: 8;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 125px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap:15px;
+  
+}
+.button-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap:15px;
+}
+.themer{
+  border-radius: 2px;
+  width:40px;
+  height: 40px;
+  /* border:1px solid red; */
+}
+.redo{
+  border-radius: 2px;
+  width: 150px;
+  height: 30px;
+  text-transform: lowercase !important;
+}
 @keyframes animation {
   0% {
     transform: translateY(50%);

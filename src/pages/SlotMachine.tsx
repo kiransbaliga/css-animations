@@ -1,6 +1,7 @@
 import { useState, useRef } from "react";
-
+import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 const SlotMachine = () => {
+    const [theme, setTheme] = useState('greentheme');
     const [isAnimating, setIsAnimating] = useState(false);
     const animationRef = useRef<null | ReturnType<typeof setTimeout>>(null);
 
@@ -13,10 +14,12 @@ const SlotMachine = () => {
             setIsAnimating(false);
         }, 3000);
     }
-
+    const handletheme= (s:string) => {
+        setTheme(s);
+    }
 
     return (<>
-        <div className='SlotScreen'>
+        <div className={`SlotScreen ${theme}`}>
             <div className="Gradient"></div>
             <div className="strokes"></div>
             <div className="contents">
@@ -41,7 +44,14 @@ const SlotMachine = () => {
             </div>
 
         </div>
-        <button className="redo" onClick={handleClick}>click me</button>
+        <div className="buttongroup glass ">
+            <div className="button-row">
+                <button className="circle glass themer fa-regular fa-square" onClick={()=>{setTheme('greentheme')}}> </button>
+                <button className="triangle glass themer fa-regular fa-circle"onClick={()=>{setTheme('bluetheme')}}></button>
+                <button className="square glass themer fa-solid fa-sharp fa-play fa-rotate-270"onClick={()=>{setTheme('pinktheme')}}></button>
+            </div>
+            <button className="redo glass fa-solid fa-redo" onClick={handleClick}> </button>
+        </div>
     </>
     )
 }
