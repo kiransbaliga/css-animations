@@ -172,7 +172,7 @@ span {
 
 .glass {
   color: #fff;
- 
+
   background-color: rgba(255, 255, 255, 0.06);
   border: 1px solid rgba(255, 255, 255, 0.1);
   width: 100%;
@@ -192,27 +192,39 @@ span {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap:15px;
-  
+  gap: 15px;
 }
 .button-row {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap:15px;
+  gap: 15px;
 }
-.themer{
+.themer {
   border-radius: 2px;
-  width:40px;
+  width: 40px;
   height: 40px;
   /* border:1px solid red; */
 }
-.redo{
+.redo {
   border-radius: 2px;
   width: 150px;
   height: 30px;
   text-transform: lowercase !important;
 }
+.Elevate {
+  z-index: 10;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 15px;
+  width: calc(65vw + 40px);
+  height: calc(65vh + 40px);
+  display: flex;
+  place-items: center;
+}
+
 @keyframes animation {
   0% {
     transform: translateY(50%);

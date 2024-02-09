@@ -1,0 +1,32 @@
+.hero {
+  width: 600px;
+  height: 500px;
+}
+
+.eye {
+  position: absolute;
+  width: 35px;
+  height: 35px;
+}
+
+.RL {
+  left: -367px;
+  top: -64px;
+  position: relative;
+}
+.RR {
+  left: -265px;
+  top: -70px;
+  position: relative;
+}
+
+.MR {
+  left: -343px;
+  top: 77px;
+  position: relative;
+}
+.ML {
+  left: -445px;
+  top: 89px;
+  position: relative;
+}
