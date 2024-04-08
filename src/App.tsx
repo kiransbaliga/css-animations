@@ -5,6 +5,7 @@ import TextEffect from "./pages/TextEffect/TextEffect";
 import Threed from "./pages/3d/Threed";
 import PolyRythm from "./pages/polyrythm/PolyRythm";
 import RickAndMorty from "./pages/rickAndMorty/RickAndMorty";
+import Slider from "./pages/slider/Slider";
 
 export default function App() {
   return (
@@ -16,6 +17,7 @@ export default function App() {
         <Route path="/3d" element={<Threed />} />
         <Route path="/polyrythm" element={<PolyRythm />} />
         <Route path="/rickandmorty" element={<RickAndMorty />} />
+        <Route path="/" element={<Slider />} />
       </Routes>
     </div>
   );

@@ -1,0 +1,109 @@
+.slider-images {
+  /* image takes up the parent div resolution
+     */
+
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.parent {
+  /* parent div of the slider */
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.line-bar {
+  height: 4px;
+  background-color: #e07229;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  animation: line-loading 1s linear;
+}
+
+.slider {
+  display: flex;
+  flex-direction: column;
+}
+
+.slider-controls {
+  /* controls at bottom right */
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  flex-direction: row;
+  gap: -20px;
+  overflow: hidden;
+  z-index: 5;
+  padding: 20px;
+}
+
+.slider-img>img :hover {
+  /* bottom left to top right border moves animation */
+  border: 12px solid orange;
+}
+
+.slider-img,
+.slider-img img {
+  /* images are small but have 16:9 ratio */
+  width: calc(60% * 1.3);
+  height: calc(60% * 1.3);
+  object-fit: cover;
+  object-position: center;
+}
+
+.filter {
+  /* overlay of smokey filter */
+  position: absolute;
+  top: -10;
+  left: 0;
+  width: 100%;
+  height: 120%;
+  background-color: rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  mix-blend-mode: color-burn;
+
+  z-index: 3;
+}
+
+.slider-content {
+  /* content of the slider on left top with some padding on either side*/
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 80px;
+  z-index: 2;
+  text-align: left;
+
+}
+
+.slider-content h1 {
+  font-size: 5.5rem;
+  color: white;
+  margin-bottom: 40px;
+}
+
+.slider-content p {
+  font-size: 1.5rem;
+  width: 40%;
+  color: white;
+  margin-bottom: 20px;
+}
+
+/* animation line-bar width from 100 to 0 % */
+@keyframes line-loading {
+  0% {
+    width: 100%;
+  }
+
+  100% {
+    width: 0%;
+  }
+}
