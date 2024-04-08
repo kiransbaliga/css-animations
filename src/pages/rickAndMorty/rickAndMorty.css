@@ -11,22 +11,31 @@
 
 .RL {
   left: -367px;
-  top: -64px;
+  top: -50px;
   position: relative;
+  border-radius: 50%;
+
 }
+
 .RR {
   left: -265px;
-  top: -70px;
+  top: -55px;
   position: relative;
+  border-radius: 50%;
+
 }
 
 .MR {
   left: -343px;
-  top: 77px;
+  top: 57px;
   position: relative;
+  border-radius: 50%;
+
 }
+
 .ML {
   left: -445px;
-  top: 89px;
+  top: 69px;
   position: relative;
+  border-radius: 50%;
 }
